@@ -22,6 +22,7 @@
     "@nomiclabs/hardhat-ethers": "^2.2.3",
     "chai": "^4.3.7",
     "ethers": "^5.7.2",
-    "hardhat-deploy": "^0.11.28"
+    "hardhat-deploy": "^0.11.28",
+    "type": "module"
   }
 }
