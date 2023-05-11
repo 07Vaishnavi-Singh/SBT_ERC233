@@ -5,7 +5,6 @@ import "./SBTERC223.sol";
 
 // just see how to inherit interfaces 
 
-
  abstract contract Vesting is IERC223{
 
 IERC223  public token ;
@@ -33,7 +32,7 @@ VESTING_START_TIME = _VESTING_START_TIME ;
 FOUNDER_WALLET = payable(_FOUNDER_WALLET) ;
 ADVISOR_ADDRESS = payable(_ADVISOR_ADDRESS) ;
 TEAM_ADDRESS = payable(_TEAM_ADDRESS) ;
-TOKEN_CONTRACT_ADDRESS = IERC223(_TOKEN_CONTRACT_ADDRESS) ; // this showing an error till all the unimplemented functions are implemented in this contract 
+// TOKEN_CONTRACT_ADDRESS = IERC223(_TOKEN_CONTRACT_ADDRESS) ; // this showing an error till all the unimplemented functions are implemented in this contract 
 
 
 }
@@ -79,8 +78,6 @@ if(nDeveloper <= nMaxDeveloper){
 
 
 }
-
-
 
 
 

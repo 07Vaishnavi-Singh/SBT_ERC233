@@ -20,7 +20,7 @@ abstract contract IERC223 {
     ) public virtual returns (bool success);
 
 // if data is also to be transferred 
-    function transfer(
+    function transferData(
         address to,
         uint value,
         bytes calldata data
@@ -77,16 +77,18 @@ contract SBTERC223 is IERC223 {
     string private _symbol;
     uint8 private _decimals;
     uint256 private _totalSupply;
-
+address public owner ;
 
     mapping(address => uint256) public balances; // List of user balances.
 
 
     constructor() {
+        owner = msg.sender ; 
         _name = "SABATA";
         _symbol = "SBT";
         _decimals = 18;
         _totalSupply = 400000000 * (10 ** _decimals );
+        balances[owner] = _totalSupply;
     }
 
 
@@ -95,7 +97,7 @@ contract SBTERC223 is IERC223 {
     }
 
 
-    function name() public view override returns (string memory) {
+    function name() public view override returns(string memory) {
         return _name;
     }
 
@@ -120,7 +122,7 @@ contract SBTERC223 is IERC223 {
     }
 
 
-    function transfer(
+    function transferData(
         address _to,
         uint _value,
         bytes calldata _data
@@ -153,3 +155,6 @@ contract SBTERC223 is IERC223 {
         return true;
     }
 }
+
+
+//0xBE8f8Ea392d113B20F490164B43F8Fcb2cac92f9

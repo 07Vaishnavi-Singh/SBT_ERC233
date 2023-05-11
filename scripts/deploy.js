@@ -7,7 +7,9 @@ async function main() {
   );
   await deployedContractInstance.deployed();
 
-  console.log("  contract address :", deployedContractInstance.address);
+  console.log(" SBTERC223 contract address :", deployedContractInstance.address);
+
+
 }
 
 main()
@@ -16,5 +18,4 @@ main()
     console.error(error);
     process.exit(1);
   });
-
 

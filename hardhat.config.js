@@ -8,8 +8,8 @@ module.exports = {
   solidity: "0.8.9",
   networks: {
     goerli: {
-      url: QUICKNODE_HTTP_URL,
-      accounts: [PRIVATE_KEY],
+      url: "https://long-billowing-hexagon.ethereum-goerli.discover.quiknode.pro/a2c26742839dc11b429e4989c4042fedcf1e486b/",
+      accounts: [ "a3187aecc91f28fa34b4ca927c53c2a54ceb6601acb2037c3dce8d78d9018a4e" ],
     },
   },
 };
